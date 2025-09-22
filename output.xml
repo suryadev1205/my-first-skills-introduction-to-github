@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3.2 (Python 3.13.6 on darwin)" generated="2025-09-19T15:27:32.180987" rpa="false" schemaversion="5">
+<suite id="s1" name="PythonProject" source="/Users/perundev/PycharmProjects/PythonProject">
+<suite id="s1-s1" name="ApiTest" source="/Users/perundev/PycharmProjects/PythonProject/ApiTest.robot">
+<test id="s1-s1-t1" name="Play around with Dictionary" line="4">
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2025-09-19T15:27:32.334445" level="INFO">${data} = {'name': 'surya', 'course': 'robot', 'website': 'rahulshettyacademy'}</msg>
+<var>${data}</var>
+<arg>name=surya</arg>
+<arg>course=robot</arg>
+<arg>website=rahulshettyacademy</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2025-09-19T15:27:32.333940" elapsed="0.000571"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-09-19T15:27:32.341770" level="INFO">{'name': 'surya', 'course': 'robot', 'website': 'rahulshettyacademy'}</msg>
+<arg>${data}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-09-19T15:27:32.341291" elapsed="0.000629"/>
+</kw>
+<kw name="Dictionary Should Contain Key" owner="Collections">
+<arg>${data}</arg>
+<arg>name</arg>
+<doc>Fails if ``key`` is not found from ``dictionary``.</doc>
+<status status="PASS" start="2025-09-19T15:27:32.342672" elapsed="0.002938"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-09-19T15:27:32.347450" level="INFO">surya</msg>
+<arg>${data}[name]</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-09-19T15:27:32.346295" elapsed="0.001411"/>
+</kw>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2025-09-19T15:27:32.349510" level="INFO">${url} = rahulshettyacademy</msg>
+<var>${url}</var>
+<arg>${data}</arg>
+<arg>website</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2025-09-19T15:27:32.348997" elapsed="0.000591"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-09-19T15:27:32.351941" level="INFO">rahulshettyacademy</msg>
+<arg>${url}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-09-19T15:27:32.351243" elapsed="0.000918"/>
+</kw>
+<status status="PASS" start="2025-09-19T15:27:32.326946" elapsed="0.030711"/>
+</test>
+<status status="PASS" start="2025-09-19T15:27:32.295634" elapsed="0.064314"/>
+</suite>
+<status status="PASS" start="2025-09-19T15:27:32.184740" elapsed="0.362442"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="PythonProject" id="s1" pass="1" fail="0" skip="0">PythonProject</stat>
+<stat name="ApiTest" id="s1-s1" pass="1" fail="0" skip="0">PythonProject.ApiTest</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
